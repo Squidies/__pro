@@ -30,6 +30,22 @@ h6 {
   font-family: $sansbold;
 }
 
+h1,
+h2 {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-shadow: 2px 0px $color;
+  text-transform: uppercase;
+
+  .tiny {
+    text-transform: none;
+  }
+}
+
 hr {
   width: 100px;
   border: 2px solid $bg;

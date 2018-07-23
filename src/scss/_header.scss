@@ -1,0 +1,10 @@
+.header {
+  background: $headergradient, $colorALT;
+  color: $bg;
+  height: 90vh;
+
+  .container {
+    @include flx_cc;
+    flex-direction: column;
+  }
+}

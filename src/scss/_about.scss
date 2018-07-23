@@ -1,0 +1,24 @@
+.about-me {
+  // background: linear-gradient(to bottom, transparentize($bg, 0.4), transparent);
+  background: $headergradient, $colorALT;
+
+  .about {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  .blurb {
+    margin-bottom: 4rem;
+  }
+  .email {
+    font-size: 0.8rem;
+  }
+
+  p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
