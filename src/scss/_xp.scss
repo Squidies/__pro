@@ -68,6 +68,10 @@
       font-weight: 100;
       text-transform: uppercase;
     }
+
+    @media screen and (min-width: $tablet) {
+      width: 50%;
+    }
   }
 
   .blank {

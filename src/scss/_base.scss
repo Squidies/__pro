@@ -10,6 +10,7 @@ body {
   color: $bg;
   font-family: $sans;
   letter-spacing: 3px;
+  text-shadow: $textshadow;
 }
 
 header,
@@ -38,7 +39,6 @@ h2 {
 h1,
 h2,
 h3 {
-  text-shadow: 2px 0px $color;
   text-transform: uppercase;
 
   .tiny {

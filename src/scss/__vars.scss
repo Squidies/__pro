@@ -17,5 +17,7 @@ $headergradient: linear-gradient(60deg, transparentize($color3, 0.77), transpare
 $sans: 'futura-pt', sans-serif;
 $sansbold: 'futura-pt-bold', sans-serfi;
 
+$textshadow: 2px 0px $color;
+
 //- MQs
 $tablet: 600px;
