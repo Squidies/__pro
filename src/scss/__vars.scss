@@ -1,0 +1,16 @@
+/* Coolors Exported Palette - coolors.co/91a0af-545f67-edf7f6-423b0b-b5fed9 */
+
+
+$color1: rgba(240, 240, 240, 1);
+$color2: rgba(17, 17, 17, 1);
+$color3: rgba(86, 97, 105, 1);
+
+$color: $color2;
+$bg: $color1;
+$colorALT: $color3;
+
+$bodygradient: linear-gradient(-60deg, $color3, transparentize($color1, 0.66));
+$headergradient: linear-gradient(60deg, transparentize($color3, 0.77), transparent), linear-gradient(to top, transparentize($color3, 0.77), $color1);
+
+$sans: 'futura-pt', sans-serif;
+$sansbold: 'futura-pt-bold', sans-serfi;
