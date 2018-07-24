@@ -9,8 +9,13 @@ body {
   background-repeat: no-repeat;
   color: $bg;
   font-family: $sans;
+  font-size: 16px;
   letter-spacing: 3px;
   text-shadow: $textshadow;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 1.66vw;
+  }
 }
 
 header,
