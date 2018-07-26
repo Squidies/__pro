@@ -1,8 +1,10 @@
-@import './scss/__vars';
-@import './scss/__mixins';
-@import './scss/_base';
-@import './scss/_helpers';
-@import './scss/_logo';
-@import './scss/_header';
-@import './scss/_xp';
-@import './scss/_about';
+$sans: 'brandon-grotesque', sans-serif;
+$serif: 'garamond-premier-pro-display', serif;
+
+body {
+  font-family: $sans;
+}
+
+h2 {
+  font-family: $serif;
+}
