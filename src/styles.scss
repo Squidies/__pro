@@ -2,15 +2,232 @@
  * Inspiration
  *
  * https://www.jasonjam.es/
+ *
+ * /* Coolors Exported Palette - coolors.co/cad6dc-04080f-292f36-4ecdc4-ffffff
+ *
+ * https://mycolor.space/gradient?ori=to+right+bottom&hex=%23FAFDFF&hex2=%23E9E9E9&sub=1
  */
+@import './scss/__mixins';
+
+$color1: #fafdff;
+$color2: #f6f8fa;
+$color3: #f2f3f4;
+$color4: #eeeeef;
+$color5: #e9e9e9;
+
+$color6: #04080F;
+$color7: #292F36;
+$color8: #4ECDC4;
+
+$tp: transparent;
 
 $sans: 'brandon-grotesque', sans-serif;
 $serif: 'garamond-premier-pro-display', serif;
 
+$bg: $color1;
+$bg_gradient: linear-gradient(to right bottom, $color1, $color2, $color3, $color4, $color5);
+$text: $color6;
+$text_light: $color7;
+$shadow: transparentize($color7, 0.3);
+
+$logosize: 130px;
+$logosize_sm: 65px;
+$stars: linear-gradient(to bottom, $text, $text);
+$bars_sm: repeating-linear-gradient(to bottom, $text 0px, $text ($logosize_sm / 13), $tp ($logosize_sm / 13), $tp (($logosize_sm / 13) * 2));
+$bars: repeating-linear-gradient(to bottom, $text 0px, $text ($logosize / 13), $tp ($logosize / 13), $tp (($logosize / 13) * 2));
+
+$md: 600px;
+
+html,
+body {
+  min-height: 100vh;
+}
+
 body {
   font-family: $sans;
+  background: $bg_gradient;
+  background-repeat: no-repeat;
 }
 
 h2 {
   font-family: $serif;
 }
+
+img {
+  max-width: 100%;
+}
+
+section {
+  min-height: 100vh;
+}
+
+hr {
+  width: 100px;
+  height: 2px;
+  background: $text;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+// .flex
+[class*="flex"] {
+  display: flex;
+
+  // .flex__col
+  &[class*="__col"] {
+    flex-direction: column;
+  }
+}
+
+.logowrapper {
+  width: $logosize_sm;
+  height: $logosize_sm;
+  color: $bg;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 1rem;
+  background: $stars, $bars_sm;
+  background-repeat: no-repeat;
+  background-position: 100% 100%, 0 0;
+  background-size: 40px 30px, 100% 100%;
+  margin: 20px auto;
+
+  .pl {
+    margin: 0.33rem;
+  }
+
+  .tiny {
+    font-size: 0.66rem;
+  }
+
+  // @media screen and (min-width: 800px) {
+  //   width: $logosize;
+  //   height: $logosize;
+  //   font-size: 2.33rem;
+  //   background: $stars, $bars;
+  //   background-repeat: no-repeat;
+  //   background-position: 100% 100%, 0 0;
+  //   background-size: 80px 60px, 100% 100%;
+  // }
+}
+
+
+.header {
+  height: 100vh;
+
+  .container {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logowrapper {
+    // position: absolute;
+    // top: 0;
+    transform: translateY(-60px);
+
+    @media screen and (orientation: landscape) {
+      transform: translateY(-60px);
+    }
+  }
+
+  .tag {
+    text-align: center;
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before,
+    &:after {
+      display: inline-block;
+      width: 25px;
+      height: 1px;
+      background: $text;
+      margin: 0 8px;
+      content: '';
+    }
+  }
+
+  @media screen and (min-width: $md) {
+    h1 {
+      font-size: 8vw;
+    }
+
+    h2 {
+      font-size: 5vw;
+    }
+  }
+}
+
+.XP {
+  text-align: center;
+
+  .projects {
+    justify-content: center;
+  }
+
+  .project-list {
+
+    @media screen and (min-width: $md) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  .project {
+    @include cf;
+    position: relative;
+    flex: 1;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 5rem;
+
+    h4 {
+      position: absolute;
+      margin: 8px;
+    }
+  }
+
+  ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.about-me {
+
+  .container {
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .logowrapper {
+    transform: rotate(180deg);
+
+    .pl {
+      transform: rotate(180deg);
+    }
+  }
+
+  .blurb {
+    max-width: 600px;
+  }
+}
+
+// $tablet
+// @media screen and (min-width: 800px) {
+//   html {
+//     font-size:
+//   }
+// }
