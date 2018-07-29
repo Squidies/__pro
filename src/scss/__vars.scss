@@ -1,23 +1,30 @@
-/* Coolors Exported Palette - coolors.co/91a0af-545f67-edf7f6-423b0b-b5fed9 */
+$color1: #fafdff;
+$color2: #f6f8fa;
+$color3: #f2f3f4;
+$color4: #eeeeef;
+$color5: #e9e9e9;
 
-$color1: rgba(240, 240, 240, 1);
-$color2: rgba(17, 17, 17, 1);
-$color3: rgba(86, 97, 105, 1);
+$color6: #04080F;
+$color7: #292F36;
+$color8: #4ECDC4;
 
-//- color map
-$color: $color2;
+$tp: transparent;
+
+$sans: 'brandon-grotesque', sans-serif;
+$serif: 'garamond-premier-pro-display', serif;
+
 $bg: $color1;
-$colorALT: $color3;
+$bg_gradient: linear-gradient(to right bottom, $color1, $color2, $color3, $color4, $color5);
+$text: $color6;
+$text_light: $color7;
+$selection: $color8;
+$shadow: 0 0 3px 0 transparentize($color7, 0.7);
+$border_radius: 3px;
 
-//- Gradients
-$bodygradient: linear-gradient(-60deg, $color3, transparentize($color1, 0.66));
-$headergradient: linear-gradient(60deg, transparentize($color3, 0.77), transparent), linear-gradient(to top, transparentize($color3, 0.77), $color1);
+$logosize: 130px;
+$logosize_sm: 65px;
+$stars: linear-gradient(to bottom, $text, $text);
+$bars_sm: repeating-linear-gradient(to bottom, $text 0px, $text ($logosize_sm / 13), $tp ($logosize_sm / 13), $tp (($logosize_sm / 13) * 2));
+$bars: repeating-linear-gradient(to bottom, $text 0px, $text ($logosize / 13), $tp ($logosize / 13), $tp (($logosize / 13) * 2));
 
-//- Fonts
-$sans: 'futura-pt', sans-serif;
-$sansbold: 'futura-pt-bold', sans-serfi;
-
-$textshadow: 2px 0px $color;
-
-//- MQs
-$tablet: 600px;
+$md: 600px;

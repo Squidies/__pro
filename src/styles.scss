@@ -7,36 +7,12 @@
  *
  * https://mycolor.space/gradient?ori=to+right+bottom&hex=%23FAFDFF&hex2=%23E9E9E9&sub=1
  */
+@import './scss/__vars';
 @import './scss/__mixins';
 
-$color1: #fafdff;
-$color2: #f6f8fa;
-$color3: #f2f3f4;
-$color4: #eeeeef;
-$color5: #e9e9e9;
-
-$color6: #04080F;
-$color7: #292F36;
-$color8: #4ECDC4;
-
-$tp: transparent;
-
-$sans: 'brandon-grotesque', sans-serif;
-$serif: 'garamond-premier-pro-display', serif;
-
-$bg: $color1;
-$bg_gradient: linear-gradient(to right bottom, $color1, $color2, $color3, $color4, $color5);
-$text: $color6;
-$text_light: $color7;
-$shadow: transparentize($color7, 0.3);
-
-$logosize: 130px;
-$logosize_sm: 65px;
-$stars: linear-gradient(to bottom, $text, $text);
-$bars_sm: repeating-linear-gradient(to bottom, $text 0px, $text ($logosize_sm / 13), $tp ($logosize_sm / 13), $tp (($logosize_sm / 13) * 2));
-$bars: repeating-linear-gradient(to bottom, $text 0px, $text ($logosize / 13), $tp ($logosize / 13), $tp (($logosize / 13) * 2));
-
-$md: 600px;
+::selection {
+  background: $selection;
+}
 
 html,
 body {
@@ -47,6 +23,8 @@ body {
   font-family: $sans;
   background: $bg_gradient;
   background-repeat: no-repeat;
+  letter-spacing: 0.16rem;
+  line-height: 1.99rem;
 }
 
 h2 {
@@ -106,16 +84,6 @@ hr {
   .tiny {
     font-size: 0.66rem;
   }
-
-  // @media screen and (min-width: 800px) {
-  //   width: $logosize;
-  //   height: $logosize;
-  //   font-size: 2.33rem;
-  //   background: $stars, $bars;
-  //   background-repeat: no-repeat;
-  //   background-position: 100% 100%, 0 0;
-  //   background-size: 80px 60px, 100% 100%;
-  // }
 }
 
 
@@ -128,8 +96,6 @@ hr {
   }
 
   .logowrapper {
-    // position: absolute;
-    // top: 0;
     transform: translateY(-60px);
 
     @media screen and (orientation: landscape) {
@@ -159,17 +125,18 @@ hr {
 
   @media screen and (min-width: $md) {
     h1 {
-      font-size: 8vw;
+      font-size: 5rem;
     }
 
     h2 {
-      font-size: 5vw;
+      font-size: 3rem;
     }
   }
 }
 
 .XP {
   text-align: center;
+  padding: 25vh 0;
 
   .projects {
     justify-content: center;
@@ -189,18 +156,57 @@ hr {
     flex: 1;
     width: 100%;
     max-width: 300px;
-    margin-top: 5rem;
+    margin: 5rem auto 0;
+    box-shadow: $shadow;
+    border-radius: $border_radius;
 
     h4 {
       position: absolute;
       margin: 8px;
+      color: $bg;
+      z-index: 1000;
     }
+
+    &:hover {
+      .avatar {
+        background-size: 175% !important;
+      }
+    }
+  }
+
+  .avatar {
+    filter: brightness(25%);
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background-size: 155% !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    transition: background-size 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .info-lists {
+    padding: 8px;
   }
 
   ul {
     text-align: left;
     list-style: none;
     padding: 0;
+  }
+}
+
+.erie {
+
+  .avatar {
+    background: url('img/erie.jpg');
+  }
+}
+
+.vokedex {
+
+  .avatar {
+    background: url('img/vokedex.png');
   }
 }
 
@@ -222,6 +228,23 @@ hr {
 
   .blurb {
     max-width: 600px;
+
+    @media screen and (min-width: $md) {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: justify;
+    }
+  }
+
+  .email {
+    font-family: $serif;
+
+    span {
+      display: inline-block;
+      width: 22px;
+    }
   }
 }
 
