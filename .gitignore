@@ -19,7 +19,6 @@
 *.rar
 *.tar
 *.zip
-!src/img/__org/*.zip
 
 # Logs and databases #
 #--------------------#
