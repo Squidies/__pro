@@ -3,7 +3,7 @@
  *
  * https://www.jasonjam.es/
  *
- * /* Coolors Exported Palette - coolors.co/cad6dc-04080f-292f36-4ecdc4-ffffff
+ * /* Coolors Exported Palette - coolors.co/cad6dc-04080f-292f36-4ecdc4-df2935
  *
  * https://mycolor.space/gradient?ori=to+right+bottom&hex=%23FAFDFF&hex2=%23E9E9E9&sub=1
  */
@@ -116,6 +116,10 @@ hr {
   background: $text;
   color: $bg;
 
+  ::selection {
+    background: $selectionalt;
+  }
+
   hr {
     background: $bg;
   }
@@ -151,6 +155,14 @@ hr {
 
 //- about
 .about-me {
+
+  .logowrapper {
+    transform: rotate(180deg);
+
+    .pl {
+      transform: rotate(180deg);
+    }
+  }
 
   .wrapper {
     display: flex;

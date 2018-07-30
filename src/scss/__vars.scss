@@ -7,6 +7,7 @@ $color5: #e9e9e9;
 $color6: #04080F;
 $color7: #292F36;
 $color8: #4ECDC4;
+$color9: #df2935;
 
 $tp: transparent;
 
@@ -18,6 +19,7 @@ $bg_gradient: linear-gradient(to right bottom, $color1, $color2, $color3, $color
 $text: $color6;
 $text_light: $color7;
 $selection: $color8;
+$selectionalt: $color9;
 $shadow: 0 0 3px 0 transparentize($color7, 0.7);
 $border_radius: 3px;
 
