@@ -1,0 +1,256 @@
+/**
+ * Inspiration
+ *
+ * https://www.jasonjam.es/
+ *
+ * /* Coolors Exported Palette - coolors.co/cad6dc-04080f-292f36-4ecdc4-ffffff
+ *
+ * https://mycolor.space/gradient?ori=to+right+bottom&hex=%23FAFDFF&hex2=%23E9E9E9&sub=1
+ */
+@import './scss/__vars';
+@import './scss/__mixins';
+
+::selection {
+  background: $selection;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: $sans;
+  background: $bg_gradient;
+  background-repeat: no-repeat;
+  letter-spacing: 0.16rem;
+  line-height: 1.99rem;
+}
+
+h2 {
+  font-family: $serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  min-height: 100vh;
+}
+
+hr {
+  width: 100px;
+  height: 2px;
+  background: $text;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+// .flex
+[class*="flex"] {
+  display: flex;
+
+  // .flex__col
+  &[class*="__col"] {
+    flex-direction: column;
+  }
+}
+
+.logowrapper {
+  width: $logosize_sm;
+  height: $logosize_sm;
+  color: $bg;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 1rem;
+  background: $stars, $bars_sm;
+  background-repeat: no-repeat;
+  background-position: 100% 100%, 0 0;
+  background-size: 40px 30px, 100% 100%;
+  margin: 20px auto;
+
+  .pl {
+    margin: 0.33rem;
+  }
+
+  .tiny {
+    font-size: 0.66rem;
+  }
+}
+
+
+.header {
+  height: 100vh;
+
+  .container {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logowrapper {
+    transform: translateY(-60px);
+
+    @media screen and (orientation: landscape) {
+      transform: translateY(-60px);
+    }
+  }
+
+  .tag {
+    text-align: center;
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before,
+    &:after {
+      display: inline-block;
+      width: 25px;
+      height: 1px;
+      background: $text;
+      margin: 0 8px;
+      content: '';
+    }
+  }
+
+  @media screen and (min-width: $md) {
+    h1 {
+      font-size: 5rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+  }
+}
+
+.XP {
+  text-align: center;
+  padding: 25vh 0;
+
+  .projects {
+    justify-content: center;
+  }
+
+  .project-list {
+
+    @media screen and (min-width: $md) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  .project {
+    @include cf;
+    position: relative;
+    flex: 1;
+    width: 100%;
+    max-width: 300px;
+    margin: 5rem auto 0;
+    box-shadow: $shadow;
+    border-radius: $border_radius;
+
+    h4 {
+      position: absolute;
+      margin: 8px;
+      color: $bg;
+      z-index: 1000;
+    }
+
+    &:hover {
+      .avatar {
+        background-size: 175% !important;
+      }
+    }
+  }
+
+  .avatar {
+    filter: brightness(25%);
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background-size: 155% !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    transition: background-size 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .info-lists {
+    padding: 8px;
+  }
+
+  ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.erie {
+
+  .avatar {
+    background: url('img/erie.jpg');
+  }
+}
+
+.vokedex {
+
+  .avatar {
+    background: url('img/vokedex.png');
+  }
+}
+
+.about-me {
+
+  .container {
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .logowrapper {
+    transform: rotate(180deg);
+
+    .pl {
+      transform: rotate(180deg);
+    }
+  }
+
+  .blurb {
+    max-width: 600px;
+
+    @media screen and (min-width: $md) {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: justify;
+    }
+  }
+
+  .email {
+    font-family: $serif;
+
+    span {
+      display: inline-block;
+      width: 22px;
+    }
+  }
+}
+
+// $tablet
+// @media screen and (min-width: 800px) {
+//   html {
+//     font-size:
+//   }
+// }
