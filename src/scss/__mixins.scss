@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 
-// micfo clearfix
+// micro clearfix
 // -- http://nicolasgallagher.com/micro-clearfix-hack/
 @mixin cf {
   &:before,
@@ -17,5 +17,24 @@
 
   &:after {
       clear: both;
+  }
+}
+
+// aspect ratio
+// -- https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }

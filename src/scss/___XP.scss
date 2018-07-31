@@ -1,0 +1,115 @@
+//- xp
+.XP {
+  background: $text;
+  color: $bg;
+
+  ::selection {
+    background: $selectionalt;
+  }
+
+  hr {
+    background: $bg;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 10rem;
+  }
+
+  .wrapper {
+    padding-bottom: 2rem;
+  }
+
+  .projects {
+    margin: 10rem 0;
+  }
+
+  .project-list {
+    list-style: none;
+    padding: 0;
+
+    @media screen and (min-width: $md) {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  .project {
+    background: $card_bg;
+    margin-bottom: 2rem;
+    border-radius: 3px;
+
+    h4 {
+      position: absolute;
+      margin-left: 8px;
+      z-index: 1000;
+    }
+
+    &:hover {
+      .avatar {
+        filter: brightness(50%);
+        background-size: 160% !important;
+      }
+    }
+
+    @media screen and (min-width: $md) {
+      flex: 1;
+      margin-left: 0.5rem;
+      max-width: 400px;
+    }
+  }
+
+  .avatar {
+    @include aspect-ratio(16, 9);
+    background-position: center center !important;
+    background-size: 130% !important;
+    background-repeat: no-repeat !important;
+    filter: brightness(20%);
+    border-radius: 3px 3px 0 0;
+    transition: all 400ms $bounce;
+  }
+
+  .info-lists {
+    display: inline-block;
+    padding: 8px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 4px 0;
+    }
+  }
+
+  .link {
+    padding: 8px;
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .icon {
+    width: 30px;
+  }
+
+  .Erie {
+
+    .avatar {
+      background: url('img/erie.jpg');
+    }
+  }
+
+  .Vokedex {
+
+    .avatar {
+      background: url('img/vokedex.png');
+    }
+  }
+}

@@ -15,11 +15,13 @@ $sans: 'brandon-grotesque', sans-serif;
 $serif: 'garamond-premier-pro-display', serif;
 
 $bg: $color1;
+$card_bg: $color7;
 $bg_gradient: linear-gradient(to right bottom, $color1, $color2, $color3, $color4, $color5);
 $text: $color6;
 $text_light: $color7;
 $selection: $color8;
 $selectionalt: $color9;
+$link: $color9;
 $shadow: 0 0 3px 0 transparentize($color7, 0.7);
 $border_radius: 3px;
 
@@ -30,3 +32,4 @@ $bars_sm: repeating-linear-gradient(to bottom, $text 0px, $text ($logosize_sm / 
 $bars: repeating-linear-gradient(to bottom, $text 0px, $text ($logosize / 13), $tp ($logosize / 13), $tp (($logosize / 13) * 2));
 
 $md: 600px;
+$bounce: cubic-bezier(0.18, 0.89, 0.32, 1.28);
