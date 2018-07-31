@@ -172,6 +172,10 @@ hr {
         background-size: 175% !important;
       }
     }
+
+    @media screen and (min-width: $md) {
+      margin: 5rem 0.5rem 0;
+    }
   }
 
   .avatar {
