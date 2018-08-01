@@ -14,6 +14,10 @@
   h3 {
     text-align: center;
     margin-bottom: 10rem;
+
+    @media screen and (min-width: $md) {
+      margin-top: 5rem;
+    }
   }
 
   .wrapper {
@@ -21,12 +25,15 @@
   }
 
   .projects {
-    margin: 10rem 0;
+    @include cf;
+    border-radius: 3px;
+    margin-top: 5rem;
   }
 
   .project-list {
     list-style: none;
-    padding: 0;
+    padding: 10rem 0;
+    background: linear-gradient(to bottom, transparentize($selection, 0.3), transparent), $text;
 
     @media screen and (min-width: $md) {
       display: flex;
@@ -35,14 +42,18 @@
   }
 
   .project {
-    background: $card_bg;
-    margin-bottom: 2rem;
+    background: $bg;
+    color: $text;
+    margin:0 0.5rem 2rem;
     border-radius: 3px;
 
     h4 {
       position: absolute;
+      color: $bg;
       margin-left: 8px;
       z-index: 1000;
+      font-size: 2rem;
+      text-shadow: $shadow;
     }
 
     &:hover {
@@ -72,6 +83,10 @@
   .info-lists {
     display: inline-block;
     padding: 8px;
+
+    hr {
+      background: $text;
+    }
 
     ul {
       list-style: none;
