@@ -1,6 +1,6 @@
 //- xp
 .XP {
-  background: $text;
+  background: $XPbg;
   color: $bg;
 
   ::selection {
@@ -32,11 +32,10 @@
 
   .project-list {
     list-style: none;
-    padding: 10rem 0;
-    background: linear-gradient(to bottom, transparentize($selection, 0.3), transparent), $text;
 
     @media screen and (min-width: $md) {
       display: flex;
+      justify-content: space-around; // ie11 fix
       justify-content: space-evenly;
     }
   }
@@ -64,9 +63,10 @@
     }
 
     @media screen and (min-width: $md) {
-      flex: 1;
+      // flex: 1;
       margin-left: 0.5rem;
       max-width: 400px;
+      width: 100%;
     }
   }
 
@@ -100,6 +100,7 @@
 
   .link {
     padding: 8px;
+    text-align: center;
   }
 
   .social {

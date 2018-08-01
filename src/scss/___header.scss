@@ -3,7 +3,8 @@
   display: flex;
 
   .wrapper {
-    min-height: 100%;
+    height: 100vh; // needed for ie11 >_<
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -24,6 +24,7 @@ $selectionalt: $color9;
 $link: $color9;
 $shadow: 0 0 3px 0 transparentize($color7, 0.7);
 $border_radius: 3px;
+$XPbg: linear-gradient(to bottom, transparentize($selection, 0.3), transparent), $text;
 
 $logosize: 130px;
 $logosize_sm: 65px;
