@@ -1,6 +1,7 @@
 //- header
 .header {
   display: flex;
+  // background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent);
 
   .wrapper {
     height: 100vh; // needed for ie11 >_<
@@ -9,15 +10,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    justify-content: space-evenly;
   }
 
   .headers {
     text-align: center;
   }
 
+  h1 {
+    margin: 0 0 .67em;
+
+    @media screen and (min-width: $md) {
+      font-size: 6vw;
+    }
+
+    @media screen and (min-width: $lg) {
+      font-size: 4.5rem;
+    }
+  }
+
   h2 {
     display: flex;
     align-items: center;
+    margin: 0 auto;
 
     &:before,
     &:after {
@@ -27,6 +42,15 @@
       flex: 1;
       margin: 4px;
       content: ''
+    }
+
+    @media screen and (min-width: $md) {
+      max-width: 35vw;
+      font-size: 4vw;
+    }
+
+    @media screen and (min-width: $lg) {
+      font-size: 3rem;
     }
   }
 }

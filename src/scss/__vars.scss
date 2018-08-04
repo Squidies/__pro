@@ -23,14 +23,28 @@ $selection: $color8;
 $selectionalt: $color9;
 $link: $color9;
 $shadow: 0 0 3px 0 transparentize($color7, 0.7);
+$projectshadow: 2px 2px 3px transparentize($color6, 0.8);
 $border_radius: 3px;
 $XPbg: linear-gradient(to bottom, transparentize($selection, 0.3), transparent), $text;
 
+
+// logo styles
 $logosize: 130px;
 $logosize_sm: 65px;
 $stars: linear-gradient(to bottom, $text, $text);
-$bars_sm: repeating-linear-gradient(to bottom, $text 0px, $text ($logosize_sm / 13), $tp ($logosize_sm / 13), $tp (($logosize_sm / 13) * 2));
-$bars: repeating-linear-gradient(to bottom, $text 0px, $text ($logosize / 13), $tp ($logosize / 13), $tp (($logosize / 13) * 2));
+$bars_sm: repeating-linear-gradient(to bottom, $text 0px,
+                                               $text ($logosize_sm / 13),
+                                               $tp ($logosize_sm / 13),
+                                               $tp (($logosize_sm / 13) * 2));
+$bars: repeating-linear-gradient(to bottom, $text 0px,
+                                            $text ($logosize / 13),
+                                            $tp ($logosize / 13),
+                                            $tp (($logosize / 13) * 2));
 
+
+// mq sizes
 $md: 600px;
+$lg: 1200px;
+
+// animation
 $bounce: cubic-bezier(0.18, 0.89, 0.32, 1.28);

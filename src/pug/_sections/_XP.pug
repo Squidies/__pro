@@ -11,6 +11,7 @@ section.XP
                 .avatar
                   .content
                 .infowrapper
+                  //- .bttn Project Summary
                   .info-lists
                     ul.roles-list
                       li.role Project Management
@@ -18,10 +19,10 @@ section.XP
                       li.role Development
                     hr
                     ul.tech-list
-                      li.tech WordPress
-                      li.tech Bootstrap
+                      li.tech #[a(href="//wordpress.org" title="Wordpress") WordPress]
+                      li.tech #[a(href="//https://getbootstrap.com/" title="Bootstrap") Bootstrap]
               .link
-                a(href="//theeriehotel.com") View The Erie Hotel
+                a(href="//theeriehotel.com" title="The Erie Hotel & Restaurant") View The Erie Hotel
           li.project.vokedex
             .Vokedex
               h4 Vokédex
@@ -29,6 +30,7 @@ section.XP
                 .avatar
                   .content
                 .infowrapper
+                  //- .bttn Project Summary
                   .info-lists
                     ul.roles-list
                       li.role Development
@@ -36,16 +38,18 @@ section.XP
                       li.role Design
                     hr
                     ul.tech-list
-                      li.tech Vue
-                      li.tech PokéAPI
+                      li.tech #[a(href="//vuejs.org" title="VueJS") Vue]
+                      li.tech #[a(href="//pokeapi.co" title="PokéAPI") PokéAPI]
               .link
-                a(href="dest/projects/vokedex") View Vokédex
+                a(href="dest/projects/vokedex" title="Vokédex") View Vokédex
+                a.giticon(href="https://github.com/Squidies/vokedex_v2" title="Github")
+                  include ../../img/github.min.svg
       .social
-        a.icon.github(href="https://github.com/Squidies" title="Github")
+        a.icon.github(href="//github.com/Squidies" title="Github: Where I keep my Git commits.")
           include ../../img/github.min.svg
-        a.icon.codepen(href="https://codepen.io/Squidies/" title="Codepen")
+        a.icon.codepen(href="//codepen.io/Squidies/" title="Codepen: demo or it didn't happen.")
           include ../../img/codepenlogo.min.svg
-        a.icon.linkedIn(href="javascript:void(0)" title="LinkedIn")
+        a.icon.linkedIn(href="//www.linkedin.com/in/kirtis-mcglynn/" title="LinkedIn: online dating for business folk.")
           include ../../img/linkedin.min.svg
-        a.icon.resume(href="dest/files/KirtisMcGlynnResume.pdf" title="Resumé")
+        a.icon.resume(href="dest/files/KirtisMcGlynnResume.pdf" title="Resumé: Print is dead. - Egon Spengler")
           include ../../img/resume.min.svg
