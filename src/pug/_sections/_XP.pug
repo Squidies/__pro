@@ -1,83 +1,55 @@
 section.XP
   .container
-    .projects
-      h3 Projects
-      hr
-      ul.project-list
-        li.project.erie
-          .Erie
-            h4 The Erie Hotel &amp; Restaurant
-            .info
-              .avatar
-              .info-lists
-                ul.roles-list
-                  li.role Project Management
-                  li.role UX
-                  li.role Development
-                hr
-                ul.tech-list
-                  li.tech WordPress
-                  li.tech Bootstrap
-        li.project.vokedex
-          .Vokedex
-            h4 Vokédex
-            .info
-              .avatar
-              .info-lists
-                ul.roles-list
-                  li.role Development
-                  li.role UX
-                  li.role Design
-                hr
-                ul.tech-list
-                  li.tech Vue
-                  li.tech PokéAPI
+    .wrapper
+      .projects
+        h3 Projects #[hr]
+        ul.project-list
+          li.project.erie
+            .Erie
+              h4 The Erie #[br] Hotel &amp; Restaurant
+              .info
+                .avatar
+                  .content
+                .infowrapper
+                  //- .bttn Project Summary
+                  .info-lists
+                    ul.roles-list
+                      li.role Project Management
+                      li.role UX
+                      li.role Development
+                    hr
+                    ul.tech-list
+                      li.tech #[a(href="//wordpress.org" title="Wordpress") WordPress]
+                      li.tech #[a(href="//https://getbootstrap.com/" title="Bootstrap") Bootstrap]
+              .link
+                a(href="//theeriehotel.com" title="The Erie Hotel & Restaurant") View The Erie Hotel
+          li.project.vokedex
+            .Vokedex
+              h4 Vokédex
+              .info
+                .avatar
+                  .content
+                .infowrapper
+                  //- .bttn Project Summary
+                  .info-lists
+                    ul.roles-list
+                      li.role Development
+                      li.role UX
+                      li.role Design
+                    hr
+                    ul.tech-list
+                      li.tech #[a(href="//vuejs.org" title="VueJS") Vue]
+                      li.tech #[a(href="//pokeapi.co" title="PokéAPI") PokéAPI]
+              .link
+                a(href="dest/projects/vokedex" title="Vokédex") View Vokédex
+                a.giticon(href="https://github.com/Squidies/vokedex_v2" title="Github")
+                  include ../../img/github.min.svg
       .social
-        .github
-        .codepen
-    .portfolio
-      .github
-      .codepen
-      .resume
-    //- .resume
-    //-   h3 Resume
-    //-   ul.skills
-    //-     li.skillset
-    //-       h4 #[span.bold Front End] Development
-    //-       ul.list
-    //-         li.skill HTML
-    //-         li.skill CSS
-    //-         li.skill JavaScript (ES5, ES6/2015) #[br] jQuery
-    //-     li.skillset
-    //-       h4 #[span.bold Build Tools] Workflow
-    //-       ul.list
-    //-         li.skill Webpack #[br] Rollup.js
-    //-         li.skill NPM Scripts
-    //-         li.skill Gulp
-    //-   ul.skills
-    //-     li.skillset
-    //-       h4 #[span.bold Preprocessors/Tooling] Development
-    //-       ul.list
-    //-         li.skill Pug
-    //-         li.skill Scss/Sass, Less
-    //-         li.skill Babel
-    //-     li.skillset
-    //-       h4 #[span.bold Content Management Systems] (CMS)
-    //-       ul.list
-    //-         li.skill WordPress
-    //-         li.skill MODX
-    //-         li.skill Joomla
-    //-   ul.skills
-    //-     li.skillset
-    //-       h4 #[span.bold UI Frameworks] Prototyping
-    //-       ul.list
-    //-         li.skill Vue.js
-    //-         li.skill Bootstrap
-    //-         li.skill Bulma
-    //-     li.skillset
-    //-       h4 #[span.bold General] Other Stuff
-    //-       ul.list
-    //-         li.skill Responsive Design
-    //-         li.skill OSX/Linux/Windows
-    //-         li.skill Git
-    //-         li.skill Adobe Creative Suite CC
+        a.icon.github(href="//github.com/Squidies" title="Github: Where I keep my Git commits.")
+          include ../../img/github.min.svg
+        a.icon.codepen(href="//codepen.io/Squidies/" title="Codepen: demo or it didn't happen.")
+          include ../../img/codepenlogo.min.svg
+        a.icon.linkedIn(href="//www.linkedin.com/in/kirtis-mcglynn/" title="LinkedIn: online dating for business folk.")
+          include ../../img/linkedin.min.svg
+        a.icon.resume(href="dest/files/KirtisMcGlynnResume.pdf" title="Resumé: Print is dead. - Egon Spengler")
+          include ../../img/resume.min.svg

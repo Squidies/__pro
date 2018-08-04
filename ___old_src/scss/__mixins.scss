@@ -1,0 +1,21 @@
+// flex center-center
+@mixin flx_cc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+// micfo clearfix
+// -- http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin cf {
+  &:before,
+  &:after {
+      content: ' ';
+      display: table;
+  }
+
+  &:after {
+      clear: both;
+  }
+}

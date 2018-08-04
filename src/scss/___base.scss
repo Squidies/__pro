@@ -1,0 +1,43 @@
+::selection {
+  background: $selection;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: $sans;
+  background: $bg_gradient;
+  background-repeat: no-repeat;
+  letter-spacing: 0.16rem;
+  line-height: 1.99rem;
+}
+
+h2 {
+  font-family: $serif;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+header,
+section {
+  @include cf;
+  min-height: 100vh;
+}
+
+hr {
+  width: 100px;
+  height: 2px;
+  background: $text;
+  border: 0;
+}
+
+a {
+  color: $link;
+  font-family: $serif;
+}

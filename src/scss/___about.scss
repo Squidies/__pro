@@ -1,0 +1,40 @@
+//- about
+.about-me {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent);
+
+  .logowrapper {
+    transform: rotate(180deg);
+
+    .pl {
+      transform: rotate(180deg);
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; // needed for ie11 >_<
+    min-height: 100vh;
+    justify-content: space-around; // ie11
+    justify-content: space-evenly;
+  }
+
+  p {
+    max-width: 600px;
+  }
+
+  .email {
+    font-family: $serif;
+    text-decoration: underline;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      width: 20px;
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.logowrapper {
+  width: $logosize_sm;
+  height: $logosize_sm;
+  color: $bg;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 1rem;
+  background: $stars, $bars_sm;
+  background-repeat: no-repeat;
+  background-position: 100% 100%, 0 0;
+  background-size: 40px 30px, 100% 100%;
+  margin: 20px auto;
+
+  .pl {
+    margin: 0.33rem;
+  }
+
+  .tiny {
+    font-size: 0.66rem;
+  }
+}

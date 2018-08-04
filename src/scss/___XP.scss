@@ -1,0 +1,176 @@
+//- xp
+.XP {
+  background: linear-gradient(165deg, rgba(0, 0, 0, 0.05) 20%, transparent 50%, transparent)
+
+  ::selection {
+    background: $selectionalt;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 10rem;
+
+    @media screen and (min-width: $md) {
+      margin-top: 5rem;
+    }
+  }
+
+  .wrapper {
+    padding-bottom: 2rem;
+  }
+
+  .projects {
+    @include cf;
+    border-radius: 3px;
+    padding-top: 5rem;
+    margin-bottom: 10rem;
+  }
+
+  .project-list {
+    list-style: none;
+    padding: 0;
+
+    @media screen and (min-width: $md) {
+      display: flex;
+      justify-content: space-around; // ie11 fix
+      justify-content: space-evenly;
+    }
+  }
+
+  .project {
+    background: $bg;
+    color: $text;
+    margin:0 0.5rem 2rem;
+    border-radius: 3px;
+    box-shadow: $projectshadow;
+
+    h4 {
+      position: absolute;
+      color: $bg;
+      margin-left: 8px;
+      font-size: 1.66rem;
+      z-index: 1000;
+      text-shadow: $shadow;
+
+      @media screen and (min-width: $md) {
+        font-size: 2rem;
+      }
+    }
+
+    &:hover {
+      .avatar {
+        filter: brightness(50%);
+        background-size: 160% !important;
+      }
+    }
+
+    @media screen and (min-width: $md) {
+      // flex: 1;
+      margin-left: 0.5rem;
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+
+  .avatar {
+    @include aspect-ratio(16, 9);
+    background-position: center center !important;
+    background-size: 130% !important;
+    background-repeat: no-repeat !important;
+    filter: brightness(20%);
+    border-radius: 3px 3px 0 0;
+    transition: all 400ms $bounce;
+  }
+
+  .infowrapper {
+    position: relative;
+  }
+
+  .bttn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: $bg;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    padding: 3px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: $projectshadow;
+  }
+
+  .info-lists {
+    display: inline-block;
+    padding: 8px;
+    margin: 3rem 0 2rem;
+
+    hr {
+      background: $text;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 4px 0;
+    }
+
+    a {
+      font-family: $sans;
+      color: $text;
+    }
+  }
+
+  .link {
+    padding: 8px;
+    text-align: center;
+
+    .giticon {
+      display: inline-block;
+      position: absolute;
+      transform: translateX(1rem);
+    }
+
+    svg {
+      width: 18px;
+      fill: transparentize($text, 0.66);
+    }
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 280px;
+    margin: 0 auto 5rem;
+
+    svg {
+      fill: $text;
+    }
+  }
+
+  .icon {
+    width: 30px;
+  }
+
+  .Erie {
+
+    .avatar {
+      background: url('img/erie.jpg');
+    }
+  }
+
+  .Vokedex {
+
+    .avatar {
+      background: url('img/vokedex.png');
+    }
+  }
+}
